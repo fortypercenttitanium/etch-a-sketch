@@ -1,0 +1,28 @@
+#border-container {
+    display: block;
+    height: 60vh;
+    width: 60vh;
+    min-height: 60rem;
+    min-width: 60rem;
+    margin: auto;
+    text-align: center;
+}
+
+#grid-container {
+    display: grid;
+    grid-gap: 1px;
+    place-items: stretch / stretch;
+    height: 50 vh;
+    width: 50 vh;
+    min-height: 50rem;
+    min-width: 50rem;
+}
+
+.grid-block {
+    background-color: aliceblue;
+}
+
+.active {
+    background-color: red;
+}
+
