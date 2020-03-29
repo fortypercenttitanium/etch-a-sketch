@@ -1,5 +1,3 @@
-
-
 const gridContainer = document.querySelector("#grid-container");
 
 const populate = (x) => {
@@ -35,6 +33,16 @@ let shader = (item) => {
 }
 
 gridContainer.addEventListener("mouseover", e => {
+    if (e.target.classList.contains("blackandwhite")){
+        e.target.style.backgroundColor = "black";
+    } else if (e.target.classList.contains("randomcolor")){
+        e.target.style.backgroundColor = randomColor();
+    } else if (e.target.classList.contains("shader")){
+        shader(e.target);
+    }
+});
+
+gridContainer.addEventListener("touchstart", e => {
     if (e.target.classList.contains("blackandwhite")){
         e.target.style.backgroundColor = "black";
     } else if (e.target.classList.contains("randomcolor")){
