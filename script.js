@@ -65,12 +65,12 @@ gridContainer.addEventListener("touchstart", handleShade);
 shake.addEventListener("click", shakeFunction);
 
 gridSize.addEventListener("click", () => {
-  let i = prompt("Please enter the row/column size as a number.");
-  if (i === null || i === "") {
+  const gridSize = prompt("Please enter the row/column size as a number.");
+  if (gridSize === null || gridSize === "") {
     return;
-  } else if (typeof i === "number" && i > 0) {
+  } else if (typeof Number(gridSize) === 'number' && Number(gridSize) > 0) {
     shakeFunction();
-    populate(i);
+    populate(gridSize);
   } else {
     alert(
       "I thought the instructions were rather simple. I guess I thought wrong."
